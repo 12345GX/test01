@@ -1,0 +1,142 @@
+/* 页面基础样式 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+/* 顶部导航条 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #6c757d, #343a40);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* 搜索框与按钮的间距 */
+    background-color: #f9f9f9; /* 搜索框背景色 */
+    padding: 8px;
+    border-radius: 8px; /* 圆角效果 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+.navbar .search-box input {
+    flex: 1; /* 占据剩余空间 */
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.navbar .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .search-box button {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    background: #495057;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.navbar .buttons a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    background: #495057;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.navbar .buttons a:hover {
+    background: #212529;
+    transform: translateY(-2px);
+}
+
+.add-note-btn {
+    background-color: #28a745;
+    font-weight: bold;
+}
+
+.add-note-btn:hover {
+    background-color: #218838;
+}
+
+/* 主体部分 */
+.content {
+    margin-top: 80px;
+    padding: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.note {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.2s;
+}
+
+.note:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.note h3 {
+    margin: 0 0 10px 0;
+    font-size: 20px;
+    color: #212529;
+}
+
+.note p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+/* 页脚 */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #343a40;
+    color: white;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+

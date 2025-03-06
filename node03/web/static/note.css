@@ -1,0 +1,198 @@
+/* 页面基础样式 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 顶部导航条 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #6c757d, #495057);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar .buttons a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    background: #6c757d;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar .buttons a:hover {
+    background: #343a40;
+    transform: translateY(-2px);
+}
+
+/* 主体内容 */
+.content {
+    margin-top: 100px;
+    padding: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* 笔记详情样式 */
+.note-detail {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    background: #f9fafb;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.note-detail h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #6c757d;
+    padding-bottom: 5px;
+}
+
+.note-detail p {
+    font-size: 14px;
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.note-content {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+    word-wrap: break-word;
+    padding: 15px;
+    background-color: #f7f9fc;
+    border-left: 5px solid #6c757d;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* 表单样式 */
+.note-editor form {
+    margin-top: 20px;
+}
+
+.note-editor label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #495057;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.note-editor input[type="text"],
+.note-editor textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #f8f9fa;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.note-editor input[type="text"]:focus,
+.note-editor textarea:focus {
+    border-color: #495057;
+    box-shadow: 0 0 5px rgba(73, 80, 87, 0.2);
+}
+
+.note-editor button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.note-editor button:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* 页脚 */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #343a40;
+    color: white;
+    font-size: 14px;
+    margin-top: 30px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .navbar .buttons {
+        margin-top: 10px;
+        flex-wrap: wrap;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .note-detail h2 {
+        font-size: 24px;
+    }
+
+    .note-editor input[type="text"],
+    .note-editor textarea {
+        font-size: 12px;
+    }
+
+    .footer {
+        font-size: 12px;
+    }
+}

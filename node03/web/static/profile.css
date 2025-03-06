@@ -1,0 +1,193 @@
+/* 页面基础样式 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f3f6;
+    color: #333;
+}
+
+/* 顶部导航条 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #6c757d, #343a40);
+    color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .buttons a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 15px;
+    background: #495057;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    margin-left: 10px;
+}
+
+.navbar .buttons a:hover {
+    background: #212529;
+    transform: translateY(-2px);
+}
+
+/* 主体内容 */
+.content {
+    max-width: 900px;
+    margin: 80px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 个人信息头部 */
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.profile-header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.profile-header img:hover {
+    transform: scale(1.05);
+}
+
+.profile-header .upload-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+}
+
+.profile-header:hover .upload-overlay {
+    display: inline-block;
+}
+
+.profile-header h2 {
+    margin: 0;
+    color: #212529;
+}
+
+.profile-header p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* 个人信息内容 */
+.profile-info {
+    margin-top: 20px;
+}
+
+.profile-info h3 {
+    margin-bottom: 10px;
+    color: #495057;
+    border-bottom: 2px solid #f1f1f1;
+    padding-bottom: 5px;
+}
+
+.profile-info .info-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.profile-info .info-item span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* 按钮样式 */
+.actions {
+    text-align: right;
+}
+
+.actions button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: #6c757d;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.actions button:hover {
+    background: #343a40;
+    transform: translateY(-2px);
+}
+
+.actions button.delete {
+    background: #dc3545;
+}
+
+.actions button.delete:hover {
+    background: #a71d2a;
+}
+
+/* 页脚 */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background: #343a40;
+    color: white;
+    margin-top: 30px;
+}
+
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* 文件上传隐藏样式 */
+#avatar-upload {
+    display: none;
+}
